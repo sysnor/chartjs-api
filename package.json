@@ -1,0 +1,17 @@
+{
+  "name": "chartjs-api",
+  "version": "0.1.0",
+  "description": "Chart.js API Server",
+  "author": "Mattias Nordstrom <mattias.nordstrom@sysnor.fi>",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "chart.js": "^2.9.4",
+    "chartjs-node-canvas": "^3.1.0",
+    "express": "^4.17.1",
+    "express-validator": "^6.10.0",
+    "lightship": "^6.6.1"
+  }
+}
