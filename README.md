@@ -85,6 +85,6 @@ Example (POST /chart):
 }
 ```
 
-## Kubernetse
+## Kubernetes
 
 When running on K8s the service has health check endpoints provided by [Lightship](https://github.com/gajus/lightship#lightship-usage-kubernetes-container-probe-configuration).
