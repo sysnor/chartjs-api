@@ -10,7 +10,7 @@
   "dependencies": {
     "chart.js": "^2.9.4",
     "chartjs-node-canvas": "^3.1.0",
-    "express": "^4.21.1",
+    "express": "^4.21.2",
     "express-validator": "^6.10.0",
     "lightship": "^6.6.1"
   }
