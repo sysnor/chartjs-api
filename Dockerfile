@@ -1,14 +1,15 @@
-FROM node:14-bullseye
+FROM node:22-bookworm
 
 WORKDIR /app
 
 RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
-    && apt-get install -y software-properties-common \
-    && apt-add-repository contrib \
+    && echo "deb http://deb.debian.org/debian bookworm contrib" > /etc/apt/sources.list.d/contrib.list \
+    && echo "ttf-mscorefonts-installer msttcorefonts/accepted-mscorefonts-eula select true" | debconf-set-selections \
     && apt-get update \
-    && apt-get -y --autoremove install --no-install-recommends ttf-mscorefonts-installer fontconfig \
+    && apt-get -y install --no-install-recommends ttf-mscorefonts-installer fontconfig \
     && apt-get clean \
-    && fc-cache
+    && rm -rf /var/lib/apt/lists/* \
+    && fc-cache -f
 
 COPY package*.json ./
 

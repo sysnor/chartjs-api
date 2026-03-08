@@ -1,17 +1,14 @@
-'use strict';
-
-//const http = require('http')
-const express = require('express')
-const { createLightship } = require('lightship')
-const { ChartJSNodeCanvas } = require('chartjs-node-canvas')
-const { body, validationResult } = require('express-validator')
+import express from 'express'
+import { createLightship } from 'lightship'
+import { ChartJSNodeCanvas } from 'chartjs-node-canvas'
+import { body, validationResult } from 'express-validator'
 
 // Constants
 const PORT = 8080
 const HOST = '0.0.0.0'
 
 // Lightship will start a HTTP service on port 9000.
-const lightship = createLightship()
+const lightship = await createLightship()
 
 // App
 const app = express()
