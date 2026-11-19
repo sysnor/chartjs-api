@@ -4,22 +4,6 @@
 	"build": {
 		"dockerfile": "Dockerfile",
 		// Update 'VARIANT' to pick a Node version: 22, 20, 18
-		"args": { "VARIANT": "22-bookworm" }
-	},
-
-	"customizations": {
-		"vscode": {
-			"extensions": [
-				"dbaeumer.vscode-eslint"
-			]
-		}
-	},
-
-	// Use 'forwardPorts' to make a list of ports inside the container available locally.
-	// "forwardPorts": [],
-
-	// Use 'postCreateCommand' to run commands after the container is created.
-	// "postCreateCommand": "npm install",
-
-	"remoteUser": "node"
+		"args": { "VARIANT": "24-trixie" }
+	}
 }
